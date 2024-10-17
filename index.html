@@ -8,16 +8,99 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section class="hero">
+    <!-- Hero Section (First Page) -->
+    <section id="hero">
         <div class="overlay">
             <div class="content">
                 <p class="year">2024-2025</p>
                 <h1>DHULIPUDI HEMA SAI</h1>
                 <h2>PORTFOLIO</h2>
-                <p class="subheading">Data Analytics | Software Development</p>
-                <p class="contact">@hemasai | +91 8499930666</p>
+                <p class="subheading">Data Analytics | Software Engineering | Machine Learning</p>
+                <p class="contact">@hemasai | +91 84999 30666</p>
             </div>
         </div>
     </section>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showPage('summary')">Summary</a></li>
+            <li><a href="#" onclick="showPage('education')">Education</a></li>
+            <li><a href="#" onclick="showPage('skills')">Skills & Certifications</a></li>
+            <li><a href="#" onclick="showPage('experience')">Experience</a></li>
+            <li><a href="#" onclick="showPage('projects')">Projects</a></li>
+            <li><a href="#" onclick="showPage('hobbies')">Hobbies</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Sections -->
+    <section id="summary" class="page" style="display:none;">
+        <h2>About Me</h2>
+        <p>Highly stimulated with a strong foundation in programming languages (Java, C, Python), and software program improvement ideas. I am eager to use my skills and contribute to a collaborative group environment, while continuing to research and extend my abilities. Excellent technical capabilities and expertise in programming languages, information analysis, and information visualization.</p>
+    </section>
+
+    <section id="education" class="page" style="display:none;">
+        <h2>Education</h2>
+        <p><strong>BACHELOR OF TECHNOLOGY IN COMPUTER SCIENCE-[AI&ML]</strong> cGPA 7.66 <br>
+        SRK INSTITUTE OF TECHNOLOGY, Enikepadu, Vijayawada, Andhra Pradesh, India – 521108</p>
+        <p><strong>BOARD OF INTERMEDIATE EDUCATION</strong> CGPA 9.28 <br>
+        NARAYANA Junior College, Vuyyuru, Andhra Pradesh, India – 521165</p>
+        <p><strong>SSC</strong> CGPA 9.3 <br>
+        JESUS High School, Veerankilock, Andhra Pradesh, India – 521250</p>
+    </section>
+
+    <section id="skills" class="page" style="display:none;">
+        <h2>Skills & Certifications</h2>
+        <ul>
+            <li>Python, Java, SQL</li>
+            <li>Machine Learning</li>
+            <li>Data Structures through Python</li>
+            <li>Problem Solving skills</li>
+            <li>Basics of Data Analytics</li>
+            <li>Communication skills</li>
+        </ul>
+        <h3>Certifications</h3>
+        <ul>
+            <li>Microsoft Azure DevOps</li>
+            <li>AWS Academy Cloud Foundations</li>
+            <li>AWS Academy Machine Learning Foundations</li>
+        </ul>
+    </section>
+
+    <section id="experience" class="page" style="display:none;">
+        <h2>Experience (Internships)</h2>
+        <h3>AWS Academy – Data Analytics Intern</h3>
+        <p>Conducted consumer data analysis on products to assist with promotional campaigns. Used Python, SQL, Tableau, Power BI, Google Analytics, and SAS to analyze conversion rates across multiple digital channels. Collaborated on machine learning initiatives and continuously monitored performance metrics post-deployment.</p>
+        <h3>Salesforce Trailhead – Salesforce Developer Intern</h3>
+        <p>Contributed to project success by participating in agile development meetings. Demonstrated initiative by improving existing Salesforce applications and regularly monitored system health.</p>
+    </section>
+
+    <section id="projects" class="page" style="display:none;">
+        <h2>Projects</h2>
+        <h3>Hand Written Digit recognition Using CNN</h3>
+        <p>Built a CNN model to recognize handwritten digits from the MNIST dataset. Preprocessed images, designed the architecture, trained the model, and achieved high accuracy.</p>
+        <h3>Vehicle Social Network: A Social Platform License Plate Communication</h3>
+        <p>Developed a website using license plate recognition to facilitate communication between parked car owners and inconvenienced drivers. Enables SMS or phone call notification upon license plate scan.</p>
+    </section>
+
+    <section id="hobbies" class="page" style="display:none;">
+        <h2>Hobbies</h2>
+        <ul>
+            <li>Watching Movies</li>
+            <li>Playing Volleyball</li>
+            <li>Learning new Technologies</li>
+        </ul>
+    </section>
+
+    <!-- JavaScript for Page Navigation -->
+    <script>
+        function showPage(pageId) {
+            var pages = document.getElementsByClassName('page');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].style.display = 'none';
+            }
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
