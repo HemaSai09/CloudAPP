@@ -1,21 +1,43 @@
-/* Styles for the portfolio */
+/* General Styles */
 body {
     margin: 0;
-    padding: 0;
     font-family: 'Poppins', sans-serif;
     background-color: #f3f3f3;
 }
 
-.hero {
+nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section (First Page) */
+#hero {
     position: relative;
     height: 100vh;
-    background-image: url('your-background-image.png'); /* Replace with the uploaded image */
+    background-image: url('your-background-image.png'); /* Replace with the uploaded background image */
     background-size: cover;
     background-position: center;
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay to enhance text visibility */
+    background-color: rgba(0, 0, 0, 0.6);
     height: 100%;
     display: flex;
     justify-content: center;
@@ -55,4 +77,28 @@ h2 {
     font-size: 16px;
     font-weight: 300;
     margin-top: 20px;
+}
+
+/* Content Section Styles */
+.page {
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.page p, .page ul {
+    font-size: 18px;
+}
+
+.page ul {
+    padding-left: 20px;
+}
+
+.page ul li {
+    margin-bottom: 10px;
 }
