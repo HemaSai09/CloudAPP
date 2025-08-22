@@ -1,0 +1,23 @@
+name: CloudApp Deployment
+
+on:
+  push:
+    branches: [ main ]   # Trigger on push to main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Fake deploy (for testing)
+        run: echo "Deploying CloudApp..."
+
+      - name: Record deployment in GitHub
+        uses: chrnorm/deployment-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          environment: Production   # Must match your environment name
+          ref: ${{ github.sha }}
