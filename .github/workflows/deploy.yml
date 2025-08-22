@@ -4,6 +4,10 @@ on:
   push:
     branches: [ main ]
 
+permissions:
+  contents: read
+  deployments: write   # ✅ allows creating deployments
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -19,5 +23,5 @@ jobs:
         uses: chrnorm/deployment-action@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          environment: Production   # 👈 must match your environment name
+          environment: Production   # ✅ must match your environment name exactly
           ref: ${{ github.sha }}
